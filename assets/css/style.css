@@ -8,6 +8,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -37,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
 }
 
 #preloader:before {
@@ -45,8 +48,8 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid white;
-  border-top-color: #d2f9eb;
+  border: 6px solid #7c7a7a48;
+  border-top-color: #611657;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -936,7 +939,7 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/cta-bg.jpg") no-repeat;
+  background: url("/assets/img/Logos/roxo.jpeg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -954,6 +957,7 @@ section {
 
 .testimonials .section-header {
   margin-bottom: 40px;
+
 }
 
 .testimonials .testimonial-item {
@@ -1002,7 +1006,7 @@ section {
 .testimonials .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
-  color: rgb(255, 255, 255);
+  color: #eee;
 }
 
 .testimonials .owl-nav, .testimonials .owl-dots {
