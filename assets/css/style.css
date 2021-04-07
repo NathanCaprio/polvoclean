@@ -1,14 +1,100 @@
-/**
-* Template Name: Bootslander - v2.1.0
-* Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+#botaodesconto{
+  color: #ffffff;
+  background-color: #611657;
+  border-radius: 1%;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.produtos{
+float: right;
+max-width: 1200px;
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:60px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:40px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
 
+.my-float{
+	margin-top:16px;
+}
+#search{
+font-size: 30px;
+color:#611657 ;
+}
+#search2{
+  font-size: 30px;
+  color: #611657;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#icon{
+  font-size: 90px;
+}
+.gallery-title
+{
+    font-size: 36px;
+    color: #8800c7;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #611657;
+    border-radius: 5px;
+    text-align: center;
+    color: #611657;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #611657;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #611657;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
 
 
 body {
