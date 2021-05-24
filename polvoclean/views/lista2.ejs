@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Listagem</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Confira a lista de tags</h1>
+    
+    <a href="/addtag"><button class="btn btn-primary">Adicionar mais tags</button></a>
+    <p>
+      <table class="table">
+        <thead>
+          <tr>
+     
+            <th scope="col">Tags</th>
+
+          
+          </tr>
+      
+     
+        </thead>
+        <tbody>
+             
+            <% for(item of tag){%>
+             <td><%= item.tag %> </td>
+
+
+
+              <td><a href="/tagedit/<%=item.id%>" class="btn btn-success">Editar</a></td>
+
+              <td><a href="#" onclick="excluir(<%= item.id %>);" class="btn btn-danger">Excluir</a></td>
+
+           
+
+
+
+          </tr>
+
+          <% } %>
+
+
+      
+          <tr>
+    
+        </tbody>
+      </table>
+      </p>
+
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.js"  crossorigin="anonymous"></script>
+<script>
+    
+  function excluir(id){
+    let res = confirm('Deseja realmente excluir esse produto?')
+   if(res){ $.ajax({
+    url: `/deletetag/${id}`,
+    type: 'DELETE',
+    success: function(resultado){
+      if(resultado == 'OK'){
+        window.location.reload()
+
+      }
+      else{
+        alert(resultado)
+      }
+    }
+  })
+}
+  }
+
+</script>
+</html>

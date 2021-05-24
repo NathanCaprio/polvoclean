@@ -1,6 +1,25 @@
 
   const items =  () =>{
-
+    
+    fetch('http://localhost:3000/apitags').then(response =>{
+      return response.json()
+     
+    }).then(data =>{
+      console.log(data)
+      
+        let html2 = data.map(tag=>{
+            return `
+            
+            <button class="btn btn-default filter-button" data-filter="${tag.tag}">${tag.tag}</button>
+  
+  
+             
+        `
+        }).join("")
+        let categorias = document.getElementById('categorias')
+        categorias.innerHTML = html2
+      })
+    
       fetch('http://localhost:3000/api').then(response =>{
       return response.json()
      
@@ -12,7 +31,7 @@
           
          <div class="col-12 col-sm-8 col-md-6 col-lg-4 filter ${produto.tag}"  class="gallery-item" data-aos="zoom-in" data-aos-delay="150" >
            <div class="card" > 
-             <img class="card-img" src="${produto.imagem}" alt=${produto.nome}>
+             <img class="card-img" src="${produto.imagem}" alt=${produto.nome}> 
              <div class="card-img-overlay d-flex justify-content-end">
                <a href="https://wa.me/5551980256547" class="card-link text-danger like">
                <!-- <i class="fas fa-heart"></i> -->
@@ -64,10 +83,10 @@
                ${produto.descricao}
                <div class="buy d-flex justify-content-between align-items-center">
             
-                 <div class="price text-success"><h4 class="mt-4">R$${produto.preco}</h4></div>
-       <a href="https://wa.me/5551980256547" role="button" class="btn btn-danger mt-3" value="Submit"> <i class="fas fa-shopping-cart"></i> Compre agora</a>
-                 
-                 </div>
+               <div class="price text-success"><h4 class="mt-4">R$${produto.preco}</h4></div>
+               <a href="https://wa.me/5551980256547" role="button" class="btn btn-danger mt-3" value="Submit"> <i class="fas fa-shopping-cart"></i> Compre agora</a>
+                         
+                         </div>
                </div>
            </div>     
             `
@@ -90,7 +109,7 @@
  
    })
  
- 
+   
  
  
    }

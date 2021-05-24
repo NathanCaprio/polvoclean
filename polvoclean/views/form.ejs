@@ -26,7 +26,7 @@
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="descricao">Descrição</label>
-                <input value="<%=produto.descricao%>" type="text" class="form-control" id="descricao" name="descricao">
+                <input style="height: 50px;width: 2000px;" value="<%=produto.descricao%>" type="text"  class="form-control" id="descricao" name="descricao">
             </div>
         </div>
         <div class="form-row">
@@ -61,14 +61,18 @@
       -->
       <div class="form-row">
         <div class="form-group col-md-2">
-      <label for="produtos">Escolha a tag do produto:</label>
 
+      <label for="produtos">Escolha a tag do produto:</label>
+      
+    
       <select id="produtos" name="tag">
-        <option value="agua" name="tag" value="<%=produto.tag%>" >Água sanitária</option>
-        <option value="desinfetante" name="tag" value="<%=produto.tag%>" >Desinfetante</option>
-        <option value="secos" name="tag" value="<%=produto.tag%>" >Seco</option>
-        <option value="lixo" name="tag" value="<%=produto.tag%>" >Lixo</option>
+        <%for (item of tag){%>
+
+        <option value="<%=item.tag%>" name="tag" value="<%=produto.tag%>" ><%=item.tag%></option>
+        <%}%>
+ 
       </select>
+   
     </div>
   </div>
       <!--

@@ -1,21 +1,21 @@
 const mysql = require('mysql')
-const db = mysql.createConnection({
+const db2 = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'your new password',
     port: 3306,
-    database: 'produtos',
+    database: 'Tags',
     multipleStatements: true
 
 });
 
-db.connect((erro)=>{
+db2.connect((erro)=>{
     if(erro){
         throw erro;
     }
-    console.log(`Conectado ao banco de dados de PRODUTOS`)
+    console.log(`Conectado ao banco de dados de TAGS`)
 })
 
-global.db = db
+global.db = db2
 
-module.exports = db;
+module.exports = db2;
